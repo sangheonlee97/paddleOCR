@@ -6,3 +6,10 @@
 각종 버전 에러 처리
 pip install protobuf==3.20.2
 pip install "urllib3<2.0"
+
+====
+
+ocr이 인식한 단어가 마구잡이로 정렬되기에 각 단어 좌표를 통해 문장 단위로 정렬하여 출력하도록 변경
+
+![alt text](image.png)
+
