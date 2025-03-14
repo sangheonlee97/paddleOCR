@@ -19,16 +19,16 @@ result = ocr_model.ocr(img_path)
 # 단일 이미지의 결과는 result[0]에 모든 검출 결과(각각 [박스, [텍스트, 신뢰도]])가 담깁니다.
 detections = result[0]
 
-# 모든 검출 결과의 텍스트를 출력합니다.
-all_texts = [detection[1][0] for detection in detections]
-for i in range(0, len(all_texts), 10):
-    print(" ".join(all_texts[i:i+10]))
+# # 모든 검출 결과의 텍스트를 출력합니다.
+# all_texts = [detection[1][0] for detection in detections]
+# for i in range(0, len(all_texts), 10):
+#     print(" ".join(all_texts[i:i+10]))
 
 # 각 검출 결과에서 박스, 텍스트, 신뢰도를 추출하고, 박스의 중심 및 왼쪽 좌표 계산
 detections_info = []
 box_heights = []  # 각 박스의 높이를 저장하여 임계값 산출에 사용
 
-for box, text, score in zip([d[0] for d in detections], 
+for box, text, score in zip([d[0] for d in detections],  
                               [d[1][0] for d in detections],
                               [float(d[1][1]) for d in detections]):
     # 각 박스의 y 좌표 리스트와 x 좌표 리스트 계산
@@ -85,7 +85,6 @@ for line in sorted_lines:
     sentences.append(sentence)
 
 # 정렬된 문장들을 출력
-print("---- Sorted Sentences ----")
 for sentence in sentences:
     print(sentence)
 
