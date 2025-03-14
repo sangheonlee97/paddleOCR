@@ -20,3 +20,8 @@ ocr이 인식한 단어가 마구잡이로 정렬되기에 각 단어 좌표를 
 
 ![alt text](image.png)
 
+====
+
+임의로 ocr 성능 테스트를 위한 이미지에서 잘 인식하지 못했던 단어들 위주로 추가 학습하려 하였으나, 잘못된 깃을 클론한 것을 발견하였습니다.
+
+https://github.com/PaddlePaddle/Paddle이 아닌 https://github.com/PaddlePaddle/PaddleOCR 클론 후 다시 시도
